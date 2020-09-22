@@ -8,5 +8,13 @@ import scrapy
 
 class ScrapyprojectItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    gdp = scrapy.Field()
+    gdp_per_capital = scrapy.Field()
+    unemployment_rate = scrapy.Field()
+    dollar_per_day = scrapy.Field()
+    population = scrapy.Field()
+    population_density = scrapy.Field()
+    land_area = scrapy.Field()
+    early_marriages = scrapy.Field()
+    literacy_rate = scrapy.Field()
+    
