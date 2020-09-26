@@ -7,7 +7,7 @@ import scrapy
 
 
 class ScrapyprojectItem(scrapy.Item):
-    # define the fields for your item here like:
+    # defining feilds for the item to be written to file
     gdp = scrapy.Field()
     gdp_per_capital = scrapy.Field()
     unemployment_rate = scrapy.Field()

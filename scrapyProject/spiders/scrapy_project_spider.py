@@ -1,4 +1,6 @@
 # Spider file 
+#Authur : Harvey Imama
+# Implements Scrapy Spider. Defines a crawler for nigeria.opendataforafrica.org
 #
 
 
@@ -11,6 +13,10 @@ class scrapyProjectSpider(Spider):
     name = 'scrapy_project_spider'
     allowed_domains = ['nigeria.opendataforafrica.org']
     start_urls = ['https://nigeria.opendataforafrica.org']
+    
+    #Implementation of the parse method from scarpy Spider
+    # Returns a request to a defined callback
+    # Reeives an Xpath from the defined start_urls paramter of thsi class
     
     def parse(self, response):
         
@@ -31,6 +37,9 @@ class scrapyProjectSpider(Spider):
             except Error:
                 raise Error("Error Crawling url "+url )
      
+    # callback listening for requests from teh parse method
+    # Returns an Item to be written to file based on configuration 
+    # Recives an xpath from initaing method
     def parse_result_page(self, response):
 
         try:
