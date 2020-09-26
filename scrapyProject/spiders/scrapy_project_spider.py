@@ -34,6 +34,7 @@ class scrapyProjectSpider(Spider):
     def parse_result_page(self, response):
 
         try:
+           
             gdp = response.xpath('//*[@class="facts"]/ul[1]/li[6]/text()').extract()
             gdp_per_capital = response.xpath('//*[@class="facts"]/ul[1]/li[7]/text()').extract()
             unemployment = response.xpath('//*[@class="facts"]/ul[1]/li[8]/text()').extract()
